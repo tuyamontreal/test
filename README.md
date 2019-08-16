@@ -14,34 +14,36 @@ public class nombreMystérieux {
 
 	private static Scanner r;
 
-	public static void main(String[] args) {r = new Scanner(System.in);
-    int n, i = 0;
-    Random m = new Random();
-    int mystérieux = m.nextInt(101);
-    System.out.println(mystérieux);
-    System.out.println("Donnez votre nombre mystérieux(0--100),vous avez maximum 10 essais:");
-    n = r.nextInt();
+	public static void main(String[] args) {
+		r = new Scanner(System.in);
+		int n, i = 0;
+		Random m = new Random();
+		int mystérieux = m.nextInt(101);
+		System.out.println(mystérieux);
+		System.out.println("Donnez votre nombre mystérieux(0--100),vous avez maximum 10 essais:");
+		n = r.nextInt();
 
-    while (i < 10) {
-        i++;
-        if (n < mystérieux) {
-            System.out.println("Encore plus grand");
+		while (i < 10) {
+			i++;
+			if (n < mystérieux) {
+				System.out.println("Encore plus grand");
 
-            System.out.println("Donnez votre nombre mystérieux(0--100):");
-            n = r.nextInt();
+				System.out.println("Donnez votre nombre mystérieux(0--100):");
+				n = r.nextInt();
 
-        } else {
-            if (n == mystérieux) {
-                System.out.println("Bravo, vous avez trouvé le nombre");
-                break;
-            } else {
-                System.out.println("Encore plus petit");
-                System.out.println("Donnez votre nombre mystérieux(0--100):");
-                n = r.nextInt();
+			} else {
+				if (n == mystérieux) {
+					System.out.println("Bravo, vous avez trouvé le nombre");
+					break;
+				} else {
+					System.out.println("Encore plus petit");
+					System.out.println("Donnez votre nombre mystérieux(0--100):");
+					n = r.nextInt();
 
-            }
-        }
+				}
+			}
 
-    }
-    System.out.println("Game Over");
-}}
+		}
+		System.out.println("Game Over");
+	}
+}
